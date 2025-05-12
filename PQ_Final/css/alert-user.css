@@ -1,0 +1,22 @@
+#alert-user {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: visible;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+#text-user {
+  padding-left: 20px; /* Tạo khoảng cách bên trái cho dấu chấm */
+  margin-top: 10px;
+  font-size: 16px; /* Cỡ chữ */
+  color: rgba(0, 0, 0, 0.8); /* Màu chữ đồng bộ với đoạn văn */
+  line-height: 1.6; /* Giãn dòng cho dễ đọc */
+}
+
+#text-user li {
+  margin-bottom: 8px; /* Khoảng cách giữa các mục */
+}

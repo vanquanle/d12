@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ thống môi trường Phú Quốc</title>
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.15/esri/themes/light/main.css"
+    />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/weather.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/air.css" />
+    <link rel="stylesheet" href="css/uvindex.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/sea.css" />
+    <link rel="stylesheet" href="css/home-menu.css" />
+    <link rel="stylesheet" href="css/alert-user.css" />
+    <link rel="stylesheet" href="css/current-date.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://js.arcgis.com/4.26/"></script>
+  </head>
+
+  <body>
+    <!-- Thành phần chung -->
+    <div id="header-container"></div>
+    <div id="searchbar-container"></div>
+    <div id="datetime-container"></div>
+    <div id="home-menu-container"></div>
+
+    <!-- Lưới bố cục chính -->
+    <main class="container">
+      <div class="grid">
+        <!-- Cột trái: nội dung -->
+        <div class="left-column">
+          <div id="location-select-container"></div>
+          <div id="weather-section-container"></div>
+          <div id="air-section-container"></div>
+          <div id="uvindex-section-container"></div>
+          <div id="sea-section-container"></div>
+        </div>
+
+        <!-- Cột phải: bản đồ -->
+        <div class="right-column">
+          <div id="viewDiv"></div>
+          <div id="alert-user-container"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Chân trang -->
+    <div id="footer-container"></div>
+
+    <!-- Load component HTML -->
+    <script src="js/include.js"></script>
+
+    <!-- Logic scripts -->
+    <script src="js/home-menu.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dictionary.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/coordinates.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/air.js"></script>
+    <script src="js/uvindex.js"></script>
+    <script src="js/sea.js"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>

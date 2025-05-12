@@ -1,0 +1,17 @@
+/* Footer */
+.site-footer {
+  margin-bottom: 0;
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.site-footer .social-links {
+  margin-top: 0.5rem;
+}
+
+.site-footer a {
+  color: #a7ffeb;
+  margin: 0 0.5rem;
+}

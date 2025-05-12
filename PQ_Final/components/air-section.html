@@ -1,0 +1,68 @@
+<section id="air-section" class="tab-section">
+  <div class="aqi-display">
+    <!-- Thang đo AQI-->
+    <div class="risk-indicator">
+      <div class="arrow-container">
+        <div class="arrow"></div>
+      </div>
+      <div class="scale-container">
+        <div class="scale">
+          <div class="level-air" id="level-safe">Tốt</div>
+          <div class="level-air" id="level-moderate">Trung bình</div>
+          <div class="level-air" id="level-unhealthy">Kém</div>
+          <div class="level-air" id="level-high">Xấu</div>
+          <div class="level-air" id="level-very-high">Rất xấu</div>
+          <div class="level-air" id="level-extreme">Nguy hại</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chỉ số AQI -->
+    <div class="aqi-info">
+      <div class="aqi-number-container" id="aqi-circle">
+        <div class="aqi-label">AQI</div>
+        <div class="aqi-number" id = "aqi-index"></div>
+      </div>
+    </div>
+
+  <!-- Các chỉ số chất lượng không khí -->
+  <div class="pollutant-cards">
+    <div class="pollutant-card">
+      <div class="label">PM2.5</div>
+      <div class="value" id="pm25-value">
+        
+      </div>
+    </div>
+    <div class="pollutant-card">
+      <div class="label">PM10</div>
+      <div class="value" id="pm10-value">
+      </div>
+    </div>
+    <div class="pollutant-card">
+      <div class="label">NO₂</div>
+      <div class="value" id="no2-value">
+      </div>
+    </div>
+    <div class="pollutant-card">
+      <div class="label">SO₂</div>
+      <div class="value" id="so2-value">
+      </div>
+    </div>
+    <div class="pollutant-card">
+      <div class="label">CO</div>
+      <div class="value" id="co-value">
+      </div>
+    </div>
+    <div class="pollutant-card">
+      <div class="label">O₃</div>
+      <div class="value" id="o3-value">
+      </div>
+    </div>
+  </div>
+
+  <!-- Biểu đồ chất lượng không khí theo giờ -->
+  <div class="aqi-chart">
+    <h2 class="subtitle">Dự báo chất lượng không khí theo giờ</h2>
+    <canvas id="airHourChart"></canvas>
+  </div>
+</section>

@@ -1,0 +1,138 @@
+/* ----- Menu Section ----- */
+.menu-section {
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-item {
+  background: linear-gradient(to bottom right, #ffffff, #f1f1f1);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 24px;
+  width: 260px;
+  height: 240px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(to bottom right, #ffffff, #e3f2fd);
+}
+
+.menu-item h3 {
+  font-size: 1.5rem;
+  color: #212121;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover h3 {
+  color: #007bff;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  color: #616161;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover p {
+  color: #333;
+}
+
+.menu-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* Giữ tỷ lệ hình ảnh */
+  margin: 0 auto 15px auto; /* Căn giữa và cách h3, p */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+  transform: scale(1.3); /* Zoom nhẹ khi hover */
+}
+
+/* Ẩn location-select và right-column trong home */
+.hidden {
+  display: none !important;
+}
+
+/* ----- News Box ----- */
+.news-box {
+  width: 100%;
+  padding: 2rem;
+  background-color: #f0f8ff;
+  color: #003b46;
+  margin-top: 6rem;
+}
+
+.news-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.slideshow-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slideshow {
+  display: flex;
+  animation: slide-left 20s linear infinite;
+}
+
+.slide {
+  flex: 0 0 300px; /* Adjust the width of each slide */
+  margin-right: 1.5rem; /* Space between slides */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.caption {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Animation for sliding */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Tạm dừng slideshow khi rê chuột */
+.slideshow-wrapper:hover .slideshow {
+  animation-play-state: paused;
+}

@@ -1,0 +1,4 @@
+/* Ẩn tất cả các phần .tab-section mặc định */
+.tab-section {
+  display: none;
+}

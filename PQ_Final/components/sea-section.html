@@ -1,0 +1,58 @@
+<section id="sea-section" class="tab-section">
+  <div class="sea-display">
+  <!-- Các chỉ số về biển -->
+  <div class="sea-cards">
+    <div class="sea-card">
+      <div class="label">Độ cao sóng</div>
+      <div class="value" id="wave_height">
+      </div>
+    </div>
+    <div class="sea-card">
+      <div class="label">Hướng sóng</div>
+      <div class="value" id="wave_direction">
+      </div>
+    </div>
+    <div class="sea-card">
+      <div class="label">Chu kỳ sóng</div>
+      <div class="value" id="wave_period">
+      </div>
+    </div>
+    <div class="sea-card">
+      <div class="label">Độ cao sóng do gió</div>
+      <div class="value" id="wind_wave_height">
+      </div>
+    </div>
+    <div class="sea-card">
+      <div class="label">Hướng sóng do gió</div> <!-- Đã thêm thẻ đóng -->
+      <div class="value" id="wind_wave_direction">
+      </div>
+    </div>
+    <div class="sea-card">
+      <div class="label">Chu kỳ sóng do gió</div>
+      <div class="value" id="wind_wave_period">
+      </div>
+    </div>
+    <div class="sea-card">
+      <div class="label">Độ cao sóng swell</div>
+      <div class="value" id="swell_wave_height">
+      </div>
+    </div>
+    <div class="sea-card">
+      <div class="label">Hướng sóng swell</div>
+      <div class="value" id="swell_wave_direction">
+      </div>
+    </div>
+    <div class="sea-card">
+      <div class="label">Chu kỳ sóng swell</div>
+      <div class="value" id="swell_wave_period">
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Biểu đồ wave_period (chu kỳ sóng theo giờ) -->
+  <div class="sea-chart">
+    <h2 class="subtitle">Dự báo chu kỳ sóng theo giờ</h2>
+    <canvas id="seaHourChart"></canvas>
+  </div>
+</section>

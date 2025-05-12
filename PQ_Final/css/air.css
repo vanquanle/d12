@@ -1,0 +1,238 @@
+/* Air Quality Indicator (AQI) Section */
+#air-section {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  background-color: #e0f7fa; /* Màu nền */
+  padding: 20px;
+  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: -15px;
+}
+
+.aqi-display {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* AQI Risk Indicator */
+.risk-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.risk-indicator .scale-container {
+  position: relative;
+  width: 500px; /* Thay đổi chiều rộng của thang đo */
+  height: 50px; /* Thay đổi chiều cao của thang đo */
+  background-color: #f0f0f0;
+  border-radius: 15px; /* Giữ bo tròn */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Đảm bảo bo tròn hoạt động */
+}
+
+.risk-indicator .scale {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.level-air {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px; /* Căn giữa chữ theo chiều dọc */
+  white-space: nowrap; /* Ngừng xuống dòng */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Thêm dấu ba chấm nếu chữ quá dài */
+}
+
+#level-safe {
+  background-color: #388e3c;
+  width: 16.66%; /* Chia đều cho 6 mức độ */
+}
+
+#level-moderate {
+  background-color: #ffeb3b;
+  width: 16.66%;
+}
+
+#level-unhealthy {
+  background-color: #ff9800;
+  width: 16.66%;
+}
+
+#level-high {
+  background-color: #f44336;
+  width: 16.66%;
+}
+
+#level-very-high {
+  background-color: #d32f2f;
+  width: 16.66%;
+}
+
+#level-extreme {
+  background-color: #7f0000;
+  width: 16.66%;
+}
+
+/* Mũi tên chỉ thị AQI */
+.arrow-container {
+  position: absolute;
+  top: 35px; /* Đẩy mũi tên ra ngoài phía trên thang đo */
+  left: 0;
+  transform: translateX(-50%);
+  z-index: 10; /* Đảm bảo mũi tên nằm trên thang đo */
+  transition: left 0.3s ease;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  left: 0;
+  background-color: black;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* AQI Info */
+.aqi-info {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+  gap: 10px; /* Khoảng cách giữa chữ và số */
+}
+
+.aqi-number-container {
+  display: flex;
+  flex-direction: column; /* Sắp xếp nội dung theo cột */
+  justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+  align-items: center; /* Căn giữa nội dung theo chiều ngang */
+  width: 150px; /* Kích thước hình tròn */
+  height: 150px; /* Kích thước hình tròn */
+  background-color: #ff5722; /* Màu nền cam */
+  border-radius: 50%; /* Tạo hình tròn */
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3),
+    /* Đổ bóng sâu hơn */ inset 0 4px 6px rgba(255, 255, 255, 0.2); /* Hiệu ứng nổi bên trong */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover */
+  margin-bottom: 10px;
+}
+
+.aqi-number-container:hover {
+  transform: scale(1.1); /* Phóng to khi hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4),
+    /* Đổ bóng sâu hơn khi hover */ inset 0 6px 8px rgba(255, 255, 255, 0.3); /* Hiệu ứng nổi bên trong khi hover */
+}
+
+.aqi-label {
+  font-size: 1rem; /* Kích thước chữ "AQI" */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px; /* Khoảng cách giữa chữ và số */
+}
+
+.aqi-number {
+  font-size: 1.8rem; /* Kích thước số */
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Pollutant Cards */
+.pollutant-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.pollutant-card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.pollutant-card .label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.pollutant-card .value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+.pollutant-card .value span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* AQI Chart */
+.aqi-chart {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.aqi-chart h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .aqi-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pollutant-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pollutant-card .value {
+    font-size: 1.2rem;
+  }
+
+  .aqi-number-container {
+    width: 60px;
+    height: 60px;
+    font-size: 1.3rem;
+  }
+
+  .risk-indicator .scale-container {
+    height: 25px;
+  }
+
+  .risk-indicator .scale {
+    height: 100%;
+  }
+
+  .level-air {
+    font-size: 0.8rem;
+  }
+
+  .arrow {
+    width: 60px; /* Tăng kích thước cho màn hình nhỏ */
+    height: 60px;
+  }
+}

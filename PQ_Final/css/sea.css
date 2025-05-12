@@ -1,0 +1,87 @@
+/* Sea Section */
+#sea-section {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  background-color: #e0f7fa; /* Màu nền */
+  padding: 20px;
+  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: -60px;
+}
+
+.sea-display {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Sea Cards */
+.sea-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột mỗi hàng */
+  gap: 15px;
+}
+
+.sea-card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.sea-card .label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  white-space: nowrap; /* Không cho phép xuống dòng */
+  overflow: hidden; /* Ẩn phần văn bản tràn */
+  text-overflow: ellipsis; /* Thêm dấu "..." nếu văn bản quá dài */
+}
+
+.sea-card .value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5722;
+  white-space: nowrap; /* Không cho phép xuống dòng */
+  overflow: hidden; /* Ẩn phần văn bản tràn */
+  text-overflow: ellipsis; /* Thêm dấu "..." nếu văn bản quá dài */
+}
+
+.sea-card .value span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Wave period Chart */
+.sea-chart {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sea-chart h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sea-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sea-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sea-card .value {
+    font-size: 1.2rem;
+  }
+}
